@@ -13,4 +13,12 @@ app.use(bodyParser.urlencoded({
    extended:true
 }));
 
+app.get("/users",(req,res)=>{
+    res.json(req);
+});
+
+app.post("/registeruser",(req,res)=>{
+    res.json(req.body);
+});
+
 app.listen(port,()=> console.log('Running on port: '+port));
